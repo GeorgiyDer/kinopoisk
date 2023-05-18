@@ -1,25 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from './Redux/store';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './Utils/theme';
-import { App } from './components/App/App';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
+import { darkmode } from './js/functions/darkmode';
+import './js/functions/pagination';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/goit-react-hw-08-phonebook">
-          <ThemeProvider theme={theme}>
-            <App />
-          </ThemeProvider>
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
-  </React.StrictMode>
-);
+import { moviesListMarkupFirstRender } from './js/functions/render-home-page';
+import { setGenreOptions } from './js/functions/local-storage';
+import { openMovieInfo } from './js/functions/open-movie-info';
+import { listRef, backdropRef } from './js/refs/refs';
+import './js/functions/search-film';
+import './js/functions/login';
+import './js/functions/pagination';
+import './js/functions/developers-modal';
+import { btnUp } from './js/components/to-top-button';
+import { darkmode } from './js/functions/darkmode';
+
+document.addEventListener('DOMContentLoaded', () => {
+  setGenreOptions();
+  moviesListMarkupFirstRender();
+  listRef.addEventListener('click', evt => {
+    backdropRef.style.display = 'block';
+    openMovieInfo(evt);
+  });
+  btnUp.addEventListener();
+  darkmode();
+});
