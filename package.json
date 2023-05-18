@@ -5,13 +5,13 @@
   "homepage": "https://georgiyder.github.io/teamProject-kinopoisk",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /team-project-kinopoisk/"
+    "build": "parcel build src/*.html --public-url /teamProject-kinopoisk/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GeorgiyDer/teamProject-kinopoisk.git"
   },
-  
+
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
