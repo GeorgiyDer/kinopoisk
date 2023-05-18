@@ -2,7 +2,7 @@
   "name": "team-project-kinopoisk",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://georgiyder.github.io/team-project-kinopoisk",
+  "homepage": "https://georgiyder.github.io/team-project-kinopoisk/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /team-project-kinopoisk/"
@@ -11,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/GeorgiyDer/team-project-kinopoisk.git"
   },
-
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
